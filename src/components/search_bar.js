@@ -1,0 +1,26 @@
+import React, { Component } from "react";
+
+class SearchBar extends Component{
+    
+    constructor(props){
+        super(props);
+        // this.onInputChange= this.onInputChange.bind(this); 
+        // this.state = {term:""};
+    }
+    render(){
+        return (
+            <div>
+            <input
+            placeholder="Search"
+            onChange={(e) => this.onInputChange(e.target.value)}
+            />
+            </div>
+        );
+    }
+
+    onInputChange(term){
+        this.props.videoSearch(term);        
+    }
+}
+
+export default SearchBar;
